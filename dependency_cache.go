@@ -182,6 +182,7 @@ func (d *DependencyCache) Artifact(dependency BuildpackDependency, mods ...Reque
 			color.New(color.FgYellow, color.Bold).Sprint("Warning:"))
 
 		d.Logger.Bodyf("%s from %s", color.YellowString("Downloading"), uri)
+
         // ensure query parameters are not included in the downloaded file name if the uri is http type
 		downloadUri, err := url.Parse(uri)
 		if err != nil {
